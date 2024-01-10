@@ -1,0 +1,36 @@
+.form {
+    margin: -25px auto;
+    width: 736px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.form > input {
+    height: 50px;
+    border-radius: 8px 0 0 8px;
+    border: none;
+    width: 80%;
+    padding: 0 15px;
+    background-color: #262626;
+    color: #fff;
+}
+
+.form > button {
+    height: 50px;
+    width: 90px;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    border: none;
+    background-color: #1e6f9f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    &:hover {
+        background-color: #18567a;
+    }
+}

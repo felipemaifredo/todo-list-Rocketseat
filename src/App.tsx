@@ -1,18 +1,22 @@
-//Imports
-import { useState } from 'react';
+// Imports
+import React, { useState } from 'react';
 
-//Css
-import './App.css'
+// CSS
+import './App.css';
 
-//Sections
+// Sections/Components
 import { Header } from './sections/Header';
 import { AddTaskForm } from './components/AddTaskForm';
-import { Tasks } from './sections/tasks';
+import { Tasks } from './sections/Tasks';
 
-//Components
+// Interfaces
+interface Task {
+  id: number;
+  description: string;
+}
 
-function App() {
-  const [tasks, setTasks] = useState([]); 
+const App: React.FC = () => {
+  const [tasks, setTasks] = useState<Task[]>([]);
 
   return (
     <>
@@ -20,7 +24,7 @@ function App() {
       <AddTaskForm setTasks={setTasks} />
       <Tasks tasks={tasks} setTasks={setTasks} />
     </>
-  )
-}
+  );
+};
 
 export default App;
